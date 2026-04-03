@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+
+  --color-brand-blue: #004a99;
+  --color-brand-yellow: #ffcc00;
+}
+
+@layer utilities {
+  .bg-dot-thick-neutral-300 {
+    background-image: radial-gradient(circle, #d4d4d4 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .bg-dot-thick-neutral-800 {
+    background-image: radial-gradient(circle, #262626 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .bg-dot-thick-indigo-500 {
+    background-image: radial-gradient(circle, #6366f1 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}

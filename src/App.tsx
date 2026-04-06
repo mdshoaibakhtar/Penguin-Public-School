@@ -114,34 +114,46 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <HeroHighlight containerClassName="h-auto py-32 md:py-48">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/5 text-brand-blue rounded-full text-xs font-bold mb-8 tracking-widest uppercase border border-brand-blue/10">
-            <Award size={14} /> Affiliated to CBSE (330866)
-          </span>
-          <h1 className="text-5xl md:text-8xl font-display font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
-            Nurturing Minds, <br />
-            <Highlight className="text-white">Shaping Futures.</Highlight>
-          </h1>
-          <p className="text-lg md:text-xl text-slate-500 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
-            Welcome to Muzaffarpur's premier educational institution. We provide a holistic and enriching learning experience for the next generation of leaders.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <a href="#admissions" className="bg-brand-blue text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-brand-blue/90 transition-all shadow-2xl shadow-brand-blue/20 hover:shadow-brand-blue/40 flex items-center gap-2 active:scale-95">
-              Admission Open <ChevronRight size={20} />
-            </a>
-            <a href="#about" className="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-2xl font-bold text-lg hover:border-brand-blue hover:text-brand-blue transition-all active:scale-95">
-              Explore Campus
-            </a>
-          </div>
-        </motion.div>
+    <div className="relative pt-20 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://penguinpublicschool.in/wp-content/uploads/2024/09/banner2.jpg" 
+          alt="School Banner" 
+          className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]"></div>
       </div>
-    </HeroHighlight>
+      
+      <HeroHighlight containerClassName="h-auto py-32 md:py-48 bg-transparent!">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue rounded-full text-xs font-bold mb-8 tracking-widest uppercase border border-brand-blue/20 backdrop-blur-md">
+              <Award size={14} /> Affiliated to CBSE (330866)
+            </span>
+            <h1 className="text-5xl md:text-8xl font-display font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
+              Nurturing Minds, <br />
+              <Highlight className="text-white">Shaping Futures.</Highlight>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+              Welcome to Muzaffarpur's premier educational institution. We provide a holistic and enriching learning experience for the next generation of leaders.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <a href="#admissions" className="bg-brand-blue text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-brand-blue/90 transition-all shadow-2xl shadow-brand-blue/20 hover:shadow-brand-blue/40 flex items-center gap-2 active:scale-95">
+                Admission Open <ChevronRight size={20} />
+              </a>
+              <a href="#about" className="bg-white/80 backdrop-blur-md text-slate-900 border border-slate-200 px-10 py-5 rounded-2xl font-bold text-lg hover:border-brand-blue hover:text-brand-blue transition-all active:scale-95">
+                Explore Campus
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </HeroHighlight>
+    </div>
   );
 };
 
